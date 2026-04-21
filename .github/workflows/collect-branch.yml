@@ -46,7 +46,7 @@ jobs:
 
       - name: Run Skopeo Sync
         run: |
-          skopeo sync \
+          skopeo sync --scoped\
             --src yaml --dest dir \
             ${{ vars.COLLECTOR }}.yml \
             ${{ vars.COLLECTOR }}
